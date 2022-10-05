@@ -1,0 +1,13 @@
+span {
+  font-weight: bold;
+  color: purple;
+}
+
+h1 {
+  color: purple;
+  text-align: center;
+}
+
+h1, h3 {
+  font-family: "courier new";
+}
