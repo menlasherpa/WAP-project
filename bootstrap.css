@@ -1,23 +1,23 @@
 header{
-    background-color: #ADD8E6;
+    background-color: DarkTurquoise;
 }
 nav{
-    background-color: #2F4F4F;
+    background-color: DarkSlateGrey;
 }
 .section-div{
     height: 50vh;
 }
 section div:first-child{
-    background-color: #525252;
+    background-color: Grey;
 }
 section div:nth-child(2){
-    background-color: #979797;
+    background-color: Silver;
 }
 section div:last-child{
-    background-color: gainsboro;
+    background-color: WhiteSmoke;
 }
 footer{
-    background-color:#2F4F4F ;
+    background-color: DarkSlateGrey ;
     color: white;
 }
 
