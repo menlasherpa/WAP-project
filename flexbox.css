@@ -18,12 +18,12 @@ header{
     grid-row: 1;
     padding: 2%;
     text-align: center;
-    background-color: #ADD8E6;
+    background-color: DarkTurquoise;
 }
 nav{
     grid-column: 1;
     grid-row: 2;
-    background-color: #2F4F4F;
+    background-color: DarkSlateGrey;
 }
 nav ul{
     display: flex;
@@ -47,19 +47,19 @@ nav ul li a{
 .first {
     width: 25%;
     float: left;
-    background-color: #525252;
+    background-color: Grey;
     padding: 2%;
   }
 .second{
     width: 50%;
     float: left;
-    background-color: #979797;
+    background-color: Silver;
     padding: 2%;
   }
 .third{
     width: 25%;
     float: left;
-    background-color: gainsboro;
+    background-color: WhiteSmoke;
     padding: 2%;
   }
 footer{
@@ -67,7 +67,7 @@ footer{
     grid-row: 1;
     padding: 2%;
     text-align: center;
-    background-color:#2F4F4F ;
+    background-color: DarkSlateGrey ;
 }
 
 @media screen and ( max-width : 600px ) {
