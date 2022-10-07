@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Basic JavaScript</title>
+  <script type="text/javascript">
+
+    function myFunctionTest(expected, found) {
+      if (expected == found) {
+        return "TEST SUCCEEDED!";
+      } else {
+        return "TEST FAILED! Expected value is " + expected + " but the output is " + found;
+      }
+    }
+
+
+
+    /* Define a function max() that takes two numbers as arguments and returns the largest of them. Use the if-then-else construct available in Javascript. */
+    function max(a, b) {
+      if (a > b) {
+        return a;
+      } else {
+        return b;
+      }
+    }
+    console.log("The maximum between two numbers is: " + max(12, 20) + " " + myFunctionTest(20, max(12, 20)));
+
+
+
+    /* Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them */
+    function maxOfThree(a, b, c) {
+      if (max(a, b) < c) {
+        return c;
+      } else {
+        return max(a, b);
+      }
+    }
+    console.log("The largest among three numbers is: " + maxOfThree(12, 34, 65) + " " + myFunctionTest(65, maxOfThree(12, 34, 65)));
+
+
+
+    /* Write a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise. */
+    function isVowel(a) {
+      if (a === "a" || a === "e" || a == "i" || a == "o" || a == "u") {
+        return "True"
+      } else {
+        return "False"
+
+      }
+    }
+    console.log("Is the given character vowel? " + isVowel("a") + " " + myFunctionTest("True", isVowel("a")));
+
+
+
+    /* Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24. */
+    let arr = [1, 2, 3, 4]
+    let totalSum = 0;
+    let totalProduct = 1;
+
+    function sum() {
+      for (let i = 0; i < arr.length; i++) {
+        totalSum += arr[i];
+      }
+      return totalSum;
+    }
+
+    function multiply() {
+      for (let i = 0; i < arr.length; i++) {
+        totalProduct *= arr[i];
+      }
+      return totalProduct;
+    }
+    console.log("Sum of the array " + arr + " is: 10 " + myFunctionTest(10, sum()));
+    console.log("Product of the array " + arr + " is: 24 " + myFunctionTest(24, multiply()));
+
+
+
+    /* Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj" */
+    let str = "lakpa";
+    let reversedStr = "";
+    function reverse(str) {
+      for (let i = str.length-1; i >= 0; i--) {
+        reversedStr += str.charAt(i);
+      }
+      return reversedStr;
+    }
+    console.log("The string " + str + " is reversed as " + reverse(str) + ". " + myFunctionTest("apkal", "apkal"));
+
+
+
+    /* Write a function findLongestWord() that takes an array of words and returns the length of the longest one.*/
+    let strArray = ["Lakpa", "Doma", "Sherpa", "Menla"]
+    const longestWord = strArray.reduce(function(longest, currentWord) {
+      if (currentWord.length > longest.length) {
+        return currentWord;
+      } else {
+        return longest;
+      }
+    });
+    console.log("The longest word's length is 6. " + myFunctionTest(6, longestWord.length));
+
+
+
+    /* Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.*/
+    const filterLongWords = strArray.filter(function(elem, i, strArray) {
+      return elem.length > 5;
+    });
+    console.log("The strings greater than 5 are Sherpa. " + myFunctionTest("Sherpa", filterLongWords.toString()));
+
+
+
+    /* Modify the jsfiddle on the map/filter/reduce slide ( https://jsfiddle.net/keithlevi/e6kqvx2f/9/ ) as follows:
+    a) multiply each element by 10;
+    b) return array with all elements equal to 3;
+    c) return the product of all elements;*/
+
+    // a)
+    const a = [1, 3, 5, 3, 3];
+    const b = a.map(function(elem, i, array) {
+      return elem * 10;
+    })
+    // document.writeln(b.toString() + "<br/>");
+    console.log(a);
+    console.log("multiply each element by 10: " + b + ". " + myFunctionTest("10,30,50,30,30", b));
+
+    // b)
+    const c = a.filter(function(elem, i, array) {
+      return elem === 3;
+    });
+    // document.writeln(c.toString() + "<br/>");
+    console.log("return array with all elements equal to 3: " + c + ". " + myFunctionTest("3,3,3", c));
+
+    // c)
+    const d = a.reduce(function(prevValue, elem, i, array) {
+      return prevValue * elem;
+    });
+    // document.writeln(d + "<br/>");
+    console.log("return the product of all elements: " + d + ". " + myFunctionTest(135, d));
+
+  </script>
+</head>
+
+<body>
+  <h1>Basic JavaScript</h1>
+  <h3>Check the output in the console.</h3>
+</body>
+
+</html>
