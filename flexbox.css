@@ -67,7 +67,8 @@ footer{
     grid-row: 1;
     padding: 2%;
     text-align: center;
-    background-color: DarkSlateGrey ;
+    background-color: DarkSlateGrey;
+    color: white;
 }
 
 @media screen and ( max-width : 600px ) {
