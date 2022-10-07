@@ -1,0 +1,34 @@
+header{
+    background-color: #ADD8E6;
+}
+nav{
+    background-color: #2F4F4F;
+}
+.section-div{
+    height: 50vh;
+}
+section div:first-child{
+    background-color: #525252;
+}
+section div:nth-child(2){
+    background-color: #979797;
+}
+section div:last-child{
+    background-color: gainsboro;
+}
+footer{
+    background-color:#2F4F4F ;
+    color: white;
+}
+
+@media screen and ( max-width : 600px ) {
+    s.section-div{
+        flex-wrap: wrap;
+    }
+    .section-div div:first-child, .section-div div:last-child{
+        width: 50%;
+    }
+    .section-div div:nth-child(2){
+        width: 100%; order: 3;
+    }
+}
