@@ -1,0 +1,25 @@
+.container-fluid {
+  width: 80%;
+  margin: auto;
+}
+h1 {
+  padding: 50px 0;
+}
+.button-group {
+  text-align: right;
+}
+.btn {
+  margin-left: 30px;
+}
+.navrbar-collapse {
+  margin-left: 50px;
+}
+.navbar-nav {
+  border-left: 2px solid white;
+  margin-left: 30px;
+  padding-left: 30px;
+}
+
+span {
+  color: white;
+}
