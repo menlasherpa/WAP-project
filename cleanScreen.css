@@ -1,0 +1,13 @@
+label {
+    display: inline-block;
+}
+
+#controler{
+    position: fixed;
+    top: 200px;
+}
+#circle{
+    text-align: center;
+    vertical-align: bottom;
+    margin: 100px 100px;
+}
