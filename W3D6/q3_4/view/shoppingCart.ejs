@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shopping Cart</title>
+</head>
+
+<body>
+  <h1>Shopping Cart</h1>
+  <% if(products.length===0){ %>
+  <p>Your Cart is Empty</p>
+  <% } else { %>
+  <% for(let item of items){ %>
+  <li>Name:<%=item.getName()%></li>
+  <ul>
+    <li>Price:<%=item.getPrice()%></li>
+    <li>Quantity:<%=item.getQuantity()%></li>
+  </ul>
+  <%} %>
+  <% } %>
+</body>
+
+</html>
