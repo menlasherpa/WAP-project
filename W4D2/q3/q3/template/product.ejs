@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/myJs.js"></script>
+    <title>Product</title>
+</head>
+<body>
+    <form id="addToCart">
+       <label>Id:</label> 
+        <input value="<%= item.id  %>" name="id" id="id">
+        <label>Name:</label> 
+        <input value="<%= item.name  %>" name="name" id="name">
+        <label>Price:</label> 
+        <input value="<%= item.price  %>" name="price" id="price">
+        <label>Quantity:</label> 
+        <input value="<%= item.quantity  %>" name="quantity" id="quantity">
+       <input type="submit" value="Add to Cart"> 
+       <span id="msg"></span>
+       <a href="/cart" id="cartCount">View Cart</a>
+    </form>
+</body>
+</html>
